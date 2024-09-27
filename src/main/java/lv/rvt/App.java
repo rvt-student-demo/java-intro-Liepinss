@@ -1,37 +1,29 @@
 package lv.rvt;
-
-public  class App
+import java.util.Scanner;
+public class App
 {
     public static void main(String[] args) {
         
     }
-Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
+                int result = 0;
+                int summa = 0;
+                while (true) {
+                        System.out.println("give a number");
+                        int number = Integer.valueOf(scanner.nextLine());
+                        if(number == 0) {
+                            break;
+                        }
 
-System.out.println("Give points [0-100]:");
-int points = Integer.valueOf(scanner.nextLine());
-if ( points < 0) {
-    System.out.println("impossible!");
-}
-else if (points <= 49){
-    System.out.println("grade: failed");
-}
-else if (points <= 59){
-    System.out.println("grade: 1");
-}
-else if (points <= 69){
-    System.out.println("grade: 2");
-}
-else if (points <= 79){
-    System.out.println("grade: 3");
-}
-else if (point <= 89){
-    System.out.println("grade: 4");
-}
-else if (point <= 100){
-    System.out.println("grade: 5");
-}
-else {
-    System.out.println("grade: incredible!");
+                        if(number > 0) {
+                            result = result + 1;
+                            summa = summa + number;
+                            continue;
+                        }
+                    
+                    }
+                    System.out.println("number of number: " + result);
+                    system.out.println("number of number: " + summa);
 }
 
-}
+    
