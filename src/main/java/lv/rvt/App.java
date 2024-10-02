@@ -2,28 +2,19 @@ package lv.rvt;
 import java.util.Scanner;
 public class App
 {
+public class Counting {
     public static void main(String[] args) {
-        
-    }
-            Scanner scanner = new Scanner(System.in);
-                int result = 0;
-                int summa = 0;
-                while (true) {
-                        System.out.println("give a number");
-                        int number = Integer.valueOf(scanner.nextLine());
-                        if(number == 0) {
-                            break;
-                        }
+        Scanner scanner = new Scanner(System.in);
 
-                        if(number > 0) {
-                            result = result + 1;
-                            summa = summa + number;
-                            continue;
-                        }
-                    
-                    }
-                    System.out.println("number of number: " + result);
-                    system.out.println("number of number: " + summa);
+        int number = scanner.nextInt();
+
+        for (int i = 0; i <= number; i++) {
+            System.out.println(i);
+        }
+        scanner.close();
+    }
+}
+
 }
 
     
