@@ -2,48 +2,28 @@ package lv.rvt;
 import java.util.Scanner;
 public class App
 {
+   
 
-    public class AverageCalculator {
-        public static void main(String[] args) 
+    public class Main {
+        public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
-            int sum = 0;
+    
+            System.out.println("How many times?");
+            int times = scanner.nextInt();
+    
             int count = 0;
-            int evenCount = 0;
-            int oddCount = 0;
-            int number;
     
-            System.out.println("Give numbers:");
-    
-           
-            while (true) {
-                number = scanner.nextInt();
-    
-                if (number == -1) {
-                    break;
-                }
-    
-                sum += number; 
-                count++;       
-    
-                if (number % 2 == 0) {
-                    evenCount++; 
-                } else {
-                    oddCount++; 
-                }
+            while (count < times) {
+                printText();
+                count++;
             }
+            scanner.close();
+        }
     
-            scanner.close(); 
-    
-           
-            System.out.println("Thx! Bye!");
-            System.out.println("Sum: " + sum);
-            System.out.println("Numbers: " + count);
-    
-            if (count > 0) {
-                double average = (double) sum / count; 
-                System.out.println("Average: " + average);
-            } else {
-                System.out.println("Average: N/A");
+        public static void printText() {
+            System.out.println("In a hole in the ground there lived a method");
+        }
+    }
     
 }
 
