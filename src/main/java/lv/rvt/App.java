@@ -1,36 +1,38 @@
 package lv.rvt;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
+public class App
 
-
-
- import java.util.Random;
-
-public class App {
-public static void main(String[] args) {
-Random random = new Random();
-int[] array = new int[10];
-
-for (int i = 0; i < array.length; i++) {
-array[i] = random.nextInt(100);
-}
-
-System.out.println("Array elements:");
-for (int num : array) {
-System.out.print(num + " ");
-}
-System.out.println();
-
-int max = array[0];
-int min = array[0];
-for (int num : array) {
-if (num > max) max = num;
-if (num < min) min = num;
-}
-
-System.out.println("Maximum value: " + max);
-System.out.println("Minimum value: " + min);
-}
+{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> birthYears = new ArrayList<>();
+        while (true) {
+        String input = scanner.nextLine();
+        if (input.isEmpty()) {
+        break;
+        }
+        
+        String[] parts = input.split(",");
+        names.add(parts[0]);
+        birthYears.add(Integer.parseInt(parts[1]));
+        }
+        String longestName = "";
+        for (String name : names) {
+        if (name.length() > longestName.length()) {
+        longestName = name;
+        }
+        }
+        int sum = 0;
+        for (int year : birthYears) {
+        sum += year;
+        }
+        double average = sum / (double) birthYears.size();
+        System.out.println("Longest name: " + longestName);
+        System.out.println("Average of the birth years: " + average);
+        }
 }
     
 
